@@ -1,3 +1,11 @@
+.iframe-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+  min-height: 100vh; 
+}
+
+
 .profile-pic {
   position: relative;
   max-width:130px;
