@@ -27,7 +27,7 @@
   bottom: 0; 
   right: 0;
 }
-button {
+moreLessButton {
   background-color: rgb(78, 152, 184); /* Blue background from the image */
   border: none; /* Remove borders */
   color: white; /* White text */
