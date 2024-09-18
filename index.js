@@ -26,7 +26,7 @@ function displayProjects(){
                   <span class="card-title activator teal-text hoverline">Day Planner<i
                       class="mdi-navigation-more-vert right"></i></span>
                   <p>
-                    ${showProject.description} 
+                    
                     THIS IS THE NEW CODE
                   </p>
                 </div>
@@ -37,7 +37,7 @@ function displayProjects(){
                       class="mdi-navigation-close right"></i></span>
                   <ul>
                     <li><b>Tools:</b> ${showProject.tools}</li>
-                    <li>${showProject.accomplishments[0]}                    
+                    <li>THIS IS THE NEW CODE                   
                     </li>
                     <li>${showProject.accomplishments[1]}   </li>
                     <li>${showProject.accomplishments[2]}   
