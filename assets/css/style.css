@@ -27,7 +27,20 @@
   bottom: 0; 
   right: 0;
 }
+button {
+  background-color: rgb(78, 152, 184); /* Blue background from the image */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Add some padding */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
 
+button:hover {
+  background-color: rgb(58, 114, 138); /* Darker blue on hover */
+}
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 .social {
   margin: 0 auto;
