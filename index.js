@@ -57,8 +57,6 @@ function displayProjects(showProject){
     const popDescription = showProject.accomplishments.map(item=>`<li>${item}</li>`).join(''); //joins everything into one string
 
     const projectCode=`
-    <div class="container">
-        <div class="row">
             <div class="col s12 m6 l4">
                 <div class="card medium">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -83,12 +81,11 @@ function displayProjects(showProject){
                 </div>
               </div>
             </div>
-        </div>
-    </div>
     `
     projectDisplay.innerHTML+=projectCode;
 }
 
 displayProjects(projects[0]);
 displayProjects(projects[1]);
+displayProjects(projects[2]);
 displayProjects(projects[2]);
