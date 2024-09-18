@@ -1,11 +1,12 @@
+let numProjShown=0;
 const projects=[{
     title: "Day Planner",
     image: "/assets/img/dayplannerpic.png",
     altImage: "Geographic Information System",
-    description: "NEWA Geographic Information System built on Glade ",
+    description: "A Geographic Information System built on Glade ",
     tools: "C++, Glade, EZGL",
     accomplishments: [
-        "NEWLed a team of 3 engineering students in developing a functional Geographic Information System in C++ that utilizes OpenStreetMap API to generate detailed and interactive maps of any chosen city.",
+        "Led a team of 3 engineering students in developing a functional Geographic Information System in C++ that utilizes OpenStreetMap API to generate detailed and interactive maps of any chosen city.",
         "Utilized algorithms such as Dijkstra's Algorithm and A* Search to determine the shortest route for efficient navigation.",
         "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
@@ -19,7 +20,6 @@ const projects=[{
     accomplishments: [
         "Developed a website that extracts all relevant information from user’s course syllabus (important deadlines, grade distributions, etc.)",
         "Utilized Flask to manage user requests and SQLAlchemy for user authentication and storing course information",
-        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
 },
 {
@@ -31,7 +31,6 @@ const projects=[{
     accomplishments: [
         "Developed a custom processor, complete with its own assembly language, capable of executing multiple instructions such as mv, mvt, add, sub, and, ld, st, along with stack operations and conditional branches.",
         "Utilized ModelSim for simulating and debugging the processor on the DE1-SoC board.",
-        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
 },
 {
@@ -42,11 +41,18 @@ const projects=[{
     tools: "C",
     accomplishments: [
         "Built a fully function Reversi game (also known as Othello), programmed for user to face a high difficulty AI",
-        "Utilized ModelSim for simulating and debugging the processor on the DE1-SoC board.",
-        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
 },
-
+{
+    title: "Block Breaker Game",
+    image: "/assets/img/blockbreaker.png",
+    altImage: "blockbreaker",
+    description: "Block Breaker game designed to function of FPGAs",
+    tools: "C",
+    accomplishments: [
+        "Engineered a high-performance block breaker game using C and Assembly designed for FPGA’s"
+    ]
+}
 ];
 
 function displayProjects(showProject){
@@ -83,9 +89,38 @@ function displayProjects(showProject){
             </div>
     `
     projectDisplay.innerHTML+=projectCode;
+    numProjShown++;
 }
 
+function intialProjects(){
 displayProjects(projects[0]);
 displayProjects(projects[1]);
 displayProjects(projects[2]);
-displayProjects(projects[2]);
+document.getElementById("showLessProjects").style.display = "none";
+document.getElementById("loadMoreProjects").style.display = "inline-block";
+}
+
+function loadMore(){
+    while (numProjShown<projects.length){
+        displayProjects(projects[numProjShown]);
+    }
+
+}
+
+
+intialProjects();
+
+document.getElementById("loadMoreProjects").addEventListener("click",function(){ //load more projects
+    loadMore();
+    document.getElementById("loadMoreProjects").style.display = "none";
+    document.getElementById("showLessProjects").style.display = "inline-block";
+}
+);
+
+document.getElementById("showLessProjects").addEventListener("click",function(){ //show less projects
+    numProjShown=0;
+    const projectDisplay = document.getElementById("recentprojects");
+    projectDisplay.innerHTML=''; //resetting to no projects shown
+    intialProjects();
+}
+);
