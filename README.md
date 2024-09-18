@@ -22,7 +22,7 @@ This repo is a clone of https://github.com/varadbhogayata/varadbhogayata.github.
 <img src="examples/Activity4.png">
 
 ### Activity 5
-<img src="examples/Activity5.png">
 <img src="examples/Activity51.png">
+<img src="examples/Activity5.png">
 <img src="examples/Activity52.png">
 <img src="examples/Activity53.png">
