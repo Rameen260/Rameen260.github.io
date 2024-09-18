@@ -52,7 +52,7 @@ const projects=[{
 function displayProjects(showProject){
     const projectDisplay = document.getElementById("recentprojects");
 
-    projectDisplay.innerHTML="";
+    //projectDisplay.innerHTML="";
    // const showProject= projects[0];
     const popDescription = showProject.accomplishments.map(item=>`<li>${item}</li>`).join(''); //joins everything into one string
 
@@ -86,8 +86,9 @@ function displayProjects(showProject){
         </div>
     </div>
     `
-    projectDisplay.innerHTML=projectCode;
+    projectDisplay.innerHTML+=projectCode;
 }
 
 displayProjects(projects[0]);
 displayProjects(projects[1]);
+displayProjects(projects[2]);
