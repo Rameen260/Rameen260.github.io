@@ -2,7 +2,7 @@ const projects=[{
     title: "Day Planner",
     image: "/assets/img/dayplannerpic.png",
     altImage: "Geographic Information System",
-    description: "A Geographic Information System built on Glade ",
+    description: "NEWA Geographic Information System built on Glade ",
     tools: "C++, Glade, EZGL",
     accomplishments: [
         "NEWLed a team of 3 engineering students in developing a functional Geographic Information System in C++ that utilizes OpenStreetMap API to generate detailed and interactive maps of any chosen city.",
@@ -11,14 +11,17 @@ const projects=[{
     ]
 }];
 
-//function displayProjects(){
+function displayProjects(){
     const projectDisplay = document.getElementById("recentprojects");
 
     projectDisplay.innerHTML="";
     const showProject= projects[0];
     
     const projectCode=`
-    <div class="card medium">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card medium">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img alt="${showProject.altImage}" src="${showProject.image}" style="height: 100%; width: 100%" class="activator" />
                 </div>
@@ -26,7 +29,7 @@ const projects=[{
                   <span class="card-title activator teal-text hoverline">Day Planner<i
                       class="mdi-navigation-more-vert right"></i></span>
                   <p>
-                    NEW code
+                  ${showProject.description}
                   </p>
                 </div>
                 <div class="card-reveal">
@@ -44,8 +47,11 @@ const projects=[{
                   </ul>
                 </div>
               </div>
+            </div>
+        </div>
+    </div>
     `
     projectDisplay.innerHTML=projectCode;
-//}
+}
 
-//displayProjects();
+displayProjects();
