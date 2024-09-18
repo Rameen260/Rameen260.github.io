@@ -65,7 +65,7 @@ function displayProjects(showProject){
                   <img alt="${showProject.altImage}" src="${showProject.image}" style="height: 100%; width: 100%" class="activator" />
                 </div>
                 <div class="card-content">
-                  <span class="card-title activator teal-text hoverline">Day Planner<i
+                  <span class="card-title activator teal-text hoverline">${showProject.title}<i
                       class="mdi-navigation-more-vert right"></i></span>
                   <p>
                   ${showProject.description}
