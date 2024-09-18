@@ -5,14 +5,14 @@ const projects=[{
     description: "A Geographic Information System built on Glade ",
     tools: "C++, Glade, EZGL",
     accomplishments: [
-        "Led a team of 3 engineering students in developing a functional Geographic Information System in C++ that utilizes OpenStreetMap API to generate detailed and interactive maps of any chosen city.",
+        "NEWLed a team of 3 engineering students in developing a functional Geographic Information System in C++ that utilizes OpenStreetMap API to generate detailed and interactive maps of any chosen city.",
         "Utilized algorithms such as Dijkstra's Algorithm and A* Search to determine the shortest route for efficient navigation.",
         "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
 }];
 
-function displayProjects(){
-    const projectDisplay = document.getElementById("recentprojects");
+//function displayProjects(){
+    const projectDisplay = document.getElementById("recent projects");
 
     projectDisplay.innerHTML="";
     const showProject= projects[0];
@@ -26,8 +26,7 @@ function displayProjects(){
                   <span class="card-title activator teal-text hoverline">Day Planner<i
                       class="mdi-navigation-more-vert right"></i></span>
                   <p>
-                    
-                    THIS IS THE NEW CODE
+                    NEW code
                   </p>
                 </div>
                 <div class="card-reveal">
@@ -37,7 +36,7 @@ function displayProjects(){
                       class="mdi-navigation-close right"></i></span>
                   <ul>
                     <li><b>Tools:</b> ${showProject.tools}</li>
-                    <li>THIS IS THE NEW CODE                   
+                    <li>${showProject.accomplishments[0]}                    
                     </li>
                     <li>${showProject.accomplishments[1]}   </li>
                     <li>${showProject.accomplishments[2]}   
@@ -46,7 +45,7 @@ function displayProjects(){
                 </div>
               </div>
     `
-    projectDisplay.innerHTML=projectCODE;
-}
+    projectDisplay.innerHTML=projectHTML;
+//}
 
-displayProjects();
+//displayProjects();
