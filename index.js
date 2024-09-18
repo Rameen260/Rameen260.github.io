@@ -12,7 +12,7 @@ const projects=[{
 }];
 
 function displayProjects(){
-    const projectDisplay = document.getElementById("recent projects");
+    const projectDisplay = document.getElementById("recentprojects");
 
     projectDisplay.innerHTML="";
     const showProject= projects[0];
@@ -46,7 +46,7 @@ function displayProjects(){
                 </div>
               </div>
     `
-    projectDisplay.innerHTML=projectHTML;
+    projectDisplay.innerHTML=projectCODE;
 }
 
 displayProjects();
