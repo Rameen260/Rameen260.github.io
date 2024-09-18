@@ -1,5 +1,6 @@
 let numProjShown=0;
 const projects=[{
+    date: "2024-04-01",
     title: "Day Planner",
     image: "/assets/img/dayplannerpic.png",
     altImage: "Geographic Information System",
@@ -12,6 +13,7 @@ const projects=[{
     ]
 },
 {
+    date: "2024-01-01",
     title: "Syllabus Organizer",
     image: "/assets/img/syllabusorganizer.png",
     altImage: "syllabus organizer",
@@ -23,6 +25,7 @@ const projects=[{
     ]
 },
 {
+    date: "2024-03-01",
     title: "Custom Processor",
     image: "/assets/img/customproccesor.png",
     altImage: "Custom Processor",
@@ -34,6 +37,7 @@ const projects=[{
     ]
 },
 {
+    date: "2022-03-01",
     title: "Reversi",
     image: "/assets/img/reversi.png",
     altImage: "Reversi",
@@ -44,6 +48,7 @@ const projects=[{
     ]
 },
 {
+    date: "2024-03-01",
     title: "Block Breaker Game",
     image: "/assets/img/blockbreaker.png",
     altImage: "blockbreaker",
@@ -54,6 +59,8 @@ const projects=[{
     ]
 }
 ];
+
+projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 function displayProjects(showProject){
     const projectDisplay = document.getElementById("recentprojects");
@@ -94,8 +101,8 @@ function displayProjects(showProject){
 
 function intialProjects(){
 displayProjects(projects[0]);
-displayProjects(projects[1]);
-displayProjects(projects[2]);
+//displayProjects(projects[1]);
+//displayProjects(projects[2]);
 document.getElementById("showLessProjects").style.display = "none";
 document.getElementById("loadMoreProjects").style.display = "inline-block";
 }
