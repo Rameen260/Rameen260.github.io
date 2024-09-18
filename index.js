@@ -9,14 +9,53 @@ const projects=[{
         "Utilized algorithms such as Dijkstra's Algorithm and A* Search to determine the shortest route for efficient navigation.",
         "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
     ]
-}];
+},
+{
+    title: "Syllabus Organizer",
+    image: "/assets/img/syllabusorganizer.png",
+    altImage: "syllabus organizer",
+    description: "Webiste that highlights student's course information",
+    tools: "Python, Flask, SQLAlchemy",
+    accomplishments: [
+        "Developed a website that extracts all relevant information from user’s course syllabus (important deadlines, grade distributions, etc.)",
+        "Utilized Flask to manage user requests and SQLAlchemy for user authentication and storing course information",
+        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
+    ]
+},
+{
+    title: "Custom Processor",
+    image: "/assets/img/customproccesor.png",
+    altImage: "Custom Processor",
+    description: "Custom Processor built using verilog",
+    tools: "Verilog/Assembly",
+    accomplishments: [
+        "Developed a custom processor, complete with its own assembly language, capable of executing multiple instructions such as mv, mvt, add, sub, and, ld, st, along with stack operations and conditional branches.",
+        "Utilized ModelSim for simulating and debugging the processor on the DE1-SoC board.",
+        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
+    ]
+},
+{
+    title: "Reversi",
+    image: "/assets/img/reversi.png",
+    altImage: "Reversi",
+    description: "Reversi against AI",
+    tools: "C",
+    accomplishments: [
+        "Built a fully function Reversi game (also known as Othello), programmed for user to face a high difficulty AI",
+        "Utilized ModelSim for simulating and debugging the processor on the DE1-SoC board.",
+        "Actively discussed algorithms, considering factors such as efficiency, scalability, and feasibility to guide the team toward effective solutions."
+    ]
+},
+
+];
 
 function displayProjects(){
     const projectDisplay = document.getElementById("recentprojects");
 
     projectDisplay.innerHTML="";
     const showProject= projects[0];
-    
+    const popDescription = showProject.accomplishments.map(item=>`<li>${item}</li>`).join(''); //joins everything into one string
+
     const projectCode=`
     <div class="container">
         <div class="row">
@@ -39,11 +78,7 @@ function displayProjects(){
                       class="mdi-navigation-close right"></i></span>
                   <ul>
                     <li><b>Tools:</b> ${showProject.tools}</li>
-                    <li>${showProject.accomplishments[0]}                    
-                    </li>
-                    <li>${showProject.accomplishments[1]}   </li>
-                    <li>${showProject.accomplishments[2]}   
-                      </li>
+                    ${popDescription}
                   </ul>
                 </div>
               </div>
